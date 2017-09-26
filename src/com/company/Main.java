@@ -16,8 +16,8 @@ public class Main {
         int countTotal = 0;
         while(scan.hasNext()){
             String check = scan.next();
-            if(set.contains(check) == false){
-                set.add(check);
+            if(set.contains(check.toLowerCase()) == false){
+                set.add(check.toLowerCase());
             }
             countTotal++;
         }
@@ -25,5 +25,19 @@ public class Main {
         System.out.println("This is Total word count " + countTotal);
         System.out.println("This is Unique word count " + countNew);
 
+
+        Scanner input = new Scanner (System.in);
+        System.out.println("Write a word");
+        String in = input.next();
+        int count2 = 0;
+        boolean appears = false;
+        while(scan.hasNext(in)){
+            if(set.contains(in.toLowerCase())){
+                count2++;
+                appears = true;
+            }
+        }
+        System.out.println("Does the word appear in the text? " + appears);
+        System.out.println("How many of the word appears in the text? " + count2);
     }
 }

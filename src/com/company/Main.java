@@ -29,15 +29,10 @@ public class Main {
         Scanner input = new Scanner (System.in);
         System.out.println("Write a word");
         String in = input.next();
-        int count2 = 0;
         boolean appears = false;
-        while(scan.hasNext(in)){
             if(set.contains(in.toLowerCase())){
-                count2++;
                 appears = true;
-            }
         }
         System.out.println("Does the word appear in the text? " + appears);
-        System.out.println("How many of the word appears in the text? " + count2);
     }
 }
